@@ -12,7 +12,7 @@ const Article = ({ frontmatter, markdown }) => {
 		>
 			<section>
 				<div className={`container`}>
-					<h1 className={`blog-title size-h-xxl`}>{frontmatter.title}</h1>
+					<h1 className={`blog-title size-h-xxl weight-600`}>{frontmatter.title}</h1>
 					<p className={'blog-date size-p-l weight-400'}>{frontmatter.date}</p>
 					<hr />
 					<div className={`blog-content`}>

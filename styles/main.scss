@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  font-family: 'Noto Sans Bamum', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: $black;
 }
 
@@ -60,17 +60,9 @@ button {
   padding: 40px 0;
 }
 
-.home {
-  background: $wave;
-  min-height: 100vh;
-}
-
-.blog {
-  background: $wave;
-  min-height: 100vh;
-}
-
-.article {
+// defaults
+// ----------------------------------------------------------
+body {
   background: $wave;
   min-height: 100vh;
 }
@@ -79,6 +71,8 @@ button {
   margin-bottom: 50px;
 }
 
+// blog
+// ----------------------------------------------------------
 .blog-items {
   @include marginPadding(0, 0);
   @include grid(30px);
@@ -91,7 +85,7 @@ button {
       @include marginPadding(0, 30px);
       @include flex(flex-start, flex-start);
       flex-direction: column;
-      grid-gap: 10px;
+      grid-gap: 20px;
       background: $abalone;
 
       &:hover {
@@ -101,6 +95,8 @@ button {
   }
 }
 
+// article
+// ----------------------------------------------------------
 .blog-title {
   margin-bottom: 20px;
 }

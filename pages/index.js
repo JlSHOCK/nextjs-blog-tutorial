@@ -10,7 +10,7 @@ const Home = () => {
     >
       <section>
         <div className={`container`}>
-          <h1 className={`title size-h-xxl`}>Home</h1>
+          <h1 className={`title size-h-xxl weight-600`}>Home</h1>
         </div>
       </section>
     </Layout >

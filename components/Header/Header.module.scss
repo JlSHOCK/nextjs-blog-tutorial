@@ -30,17 +30,22 @@
 
 .nav {
   @include flex(flex-end, center);
-  grid-gap: 50px;
+  grid-gap: 30px;
 }
 
 .nav_items {
   @include marginPadding(0, 0);
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    @include flex(flex-end, center);
+  }
 
   .nav_item {
     @include marginPadding(0, 0);
 
     .nav_item_link {
-      @include marginPadding(0, 0);
+      @include marginPadding(0, 0 15px);
       @include flex(center, center);
       color: $white;
       text-align: center;
@@ -48,7 +53,7 @@
       color: $black;
 
       &:hover {
-        color: $apricot;
+        color: $ochre;
       }
     }
   }

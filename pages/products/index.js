@@ -3,23 +3,23 @@ import matter from 'gray-matter'
 import Link from 'next/link'
 import Layout from '../../components/Layout'
 
-const Blog = ({ blogs }) => {
+const Products = ({ products }) => {
   return (
     <Layout
-      pageClass="blog"
-      title="Blog"
+      pageClass="products"
+      title="Products"
       description=""
     >
       <section>
         <div className={`container`}>
-          <h1 className={`title size-h-xxl weight-600`}>Blog</h1>
+          <h1 className={`title size-h-xxl weight-600`}>Products</h1>
           <ul className={'blog-items'}>
-            {blogs.map(blog => (
-              <li key={blog.slug} className={'blog-item'}>
-                <Link href={`/blog/${blog.slug}`}>
+            {products.map(product => (
+              <li key={product.slug} className={'blog-item'}>
+                <Link href={`/blog/${product.slug}`}>
                   <a className={'blog-item-link'}>
-                    <span className={'blog-item-title size-h-m weight-300'}>{blog.title}</span>
-                    <span className={'blog-item-date size-p-xs weight-700'}>{blog.date}</span>
+                    <span className={'blog-item-title size-h-m weight-300'}>{product.title}</span>
+                    <span className={'blog-item-date size-p-xs weight-700'}>{product.date}</span>
                   </a>
                 </Link>
               </li>
@@ -33,11 +33,11 @@ const Blog = ({ blogs }) => {
 
 export async function getStaticProps() {
   // List of files in blgos folder
-  const filesInBlogs = fs.readdirSync('./content/blogs')
+  const filesInProducts = fs.readdirSync('./content/products')
 
   // Get the front matter and slug (the filename without .md) of all files
-  const blogs = filesInBlogs.map(filename => {
-    const file = fs.readFileSync(`./content/blogs/${filename}`, 'utf8')
+  const products = filesInProducts.map(filename => {
+    const file = fs.readFileSync(`./content/products/${filename}`, 'utf8')
     const matterData = matter(file)
 
     return {
@@ -48,10 +48,10 @@ export async function getStaticProps() {
 
   return {
     props: {
-      blogs
+      products
     }
   }
 
 }
 
-export default Blog;
+export default Products;
