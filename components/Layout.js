@@ -7,7 +7,7 @@ const Layout = ({ title, description, keywords, pageClass, children }) => {
         <div className={`page ${pageClass}`}>
             <div className="bg"></div>
             <Head>
-                <title>{title} | Renovating Health</title>
+                <title>{`${title} | Renovating Health`}</title>
                 <meta name="description" content={description} />
                 {keywords && <meta name="keywords" content={keywords} />}
                 <meta name='viewport' content='width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
