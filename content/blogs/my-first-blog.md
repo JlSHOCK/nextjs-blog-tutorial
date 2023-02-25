@@ -2,94 +2,20 @@
 title: My First Blog
 date: August 5, 2021 1:24 PM
 ---
+Until recently, the prevailing view assumed *lorem ipsum* was born as a nonsense text. “It's not Latin, though it looks like it, and it actually says nothing,” *Before & After* magazine [answered a curious reader](https://www.straightdope.com/columns/read/2290/what-does-the-filler-text-lorem-ipsum-mean/ "Straight Dope – What Does the Filler Text Lorem Ipsum Mean?"), “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.”
 
-# This contains all markdown elements
+As Cicero would put it, “Um, not so fast.”
 
-# h1 Heading 8-)
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+The placeholder text, beginning with the line *“Lorem ipsum dolor sit amet, consectetur adipiscing elit”*, looks like Latin because in its youth, centuries ago, it was Latin.
 
+Richard McClintock, a Latin scholar from Hampden-Sydney College, is [credited](https://en.wikipedia.org/wiki/Lorem_ipsum "Wikipedia – Lorem Ipsum") with discovering the source behind the ubiquitous filler text. In seeing a sample of *lorem ipsum*, his interest was piqued by *consectetur*—a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from *De Finibus Bonorum et Malorum* (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
 
-## Horizontal Rules
+In particular, the garbled words of *lorem ipsum* bear an unmistakable resemblance to sections 1.10.32–33 of Cicero's work, with the most notable passage excerpted below:
 
-___
+> “Neque porro quisquam est, qui *dolorem ipsum* quia *dolor sit amet, consectetur, adipisci velit, sed* quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.”
 
----
+A 1914 English translation by [Harris Rackham](https://en.wikipedia.org/wiki/Lorem_ipsum#English_translation "Wikipedia – Lorem Ipsum English Translation") reads:
 
-***
+> “Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure.”
 
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-
-## Blockquotes
-
-> Hello
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+McClintock's eye for detail certainly helped narrow the whereabouts of *lorem ipsum's* origin, however, the “how and when” still remain something of a mystery, with competing theories and timelines.
