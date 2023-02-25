@@ -5,7 +5,6 @@ import Header from './Header';
 const Layout = ({ title, description, keywords, pageClass, children }) => {
     return (
         <div className={`page ${pageClass}`}>
-            <div className="bg"></div>
             <Head>
                 <title>{`${title} | Renovating Health`}</title>
                 <meta name="description" content={description} />
