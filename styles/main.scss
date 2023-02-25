@@ -108,3 +108,59 @@ body {
 .blog-content {
   margin-top: 50px;
 }
+
+// products
+// ----------------------------------------------------------
+.products {
+  @include marginPadding(0, 0);
+  @include grid(30px);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  .product {
+    position: relative;
+    @include marginPadding(0, 0);
+    grid-gap: 20px;
+    background: $white;
+    border: 1px solid $abalone;
+
+    &:hover {
+      @include boxShadow();
+    }
+
+    .product-link {
+      @include absoluteLink()
+    }
+
+    .product-img-container {
+      .product-img {
+        @include fullWidthImage();
+      }
+    }
+
+    .product-content {
+      @include marginPadding(0, 30px);
+
+      .product-name {
+        @include marginPadding(0 0 10px, 0);
+      }
+
+      .product-company {
+        @include marginPadding(0, 0);
+      }
+
+      .product-categories {
+        @include marginPadding(20px 0 0, 0);
+        @include flex(flex-start, center);
+        grid-gap: 10px;
+
+        .product-category {
+          @include marginPadding(0, 7px 10px);
+          font-size: 12px;
+          color: $white;
+          text-transform: uppercase;
+          background: $sunrise;
+        }
+      }
+    }
+  }
+}

@@ -22,9 +22,10 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
+      - {label: "Product Image", name: image, widget: image, default: "/images/placeholder-product.png"}
       - {label: "Product Name", name: "name", widget: "string"}
       - {label: "Product Link", name: "link", widget: "string"}
-      - {label: "Product Category", name: "category", widget: "select", options: ["One", "Two", "Three"]}
+      - {label: "Product Category", name: "category", widget: "select", multiple: true, options: ["One", "Two", "Three"]}
   # - label: "Pages"
   #   name: "pages"
   #   files:
