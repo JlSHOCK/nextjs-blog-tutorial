@@ -26,7 +26,7 @@ collections:
       - {label: "Product Name", name: "name", widget: "string"}
       - {label: "Product Company", name: "company", widget: "string"}
       - {label: "Product Link", name: "link", widget: "string"}
-      - {label: "Product Category", name: "category", widget: "select", multiple: true, options: ["Category 1", "Category 2", "Category 3"], required: false}
+      - {label: "Product Category", name: "category", widget: "select", multiple: true, options: ["Ctgry 1", "Ctgry 2", "Ctgry 3"], required: false}
   # - label: "Pages"
   #   name: "pages"
   #   files:

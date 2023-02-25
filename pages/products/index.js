@@ -26,7 +26,7 @@ const Products = ({ products }) => {
                 <div className={'product-content'}>
                   {
                     product.company &&
-                    <p className={'product-company size-p-s weight-400'}>{product.company}</p>
+                    <p className={'product-company size-p-xs weight-400'}>{product.company}</p>
                   }
                   <h3 className={'product-name size-p-l weight-700'}>{product.name}</h3>
                   {/* {

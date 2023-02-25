@@ -154,6 +154,8 @@ body {
 
       .product-company {
         @include marginPadding(0 0 5px, 0);
+        text-transform: uppercase;
+        letter-spacing: -.5px;
       }
 
       .product-name {

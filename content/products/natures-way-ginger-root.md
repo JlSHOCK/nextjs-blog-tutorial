@@ -4,6 +4,6 @@ name: Ginger Root Digestive Capsules
 company: Nature's Way
 link: https://www.amazon.com/gp/product/B074N99XL1
 category:
-  - Category 1
-  - Category 3
+  - Ctgry 1
+  - Ctgry 3
 ---
