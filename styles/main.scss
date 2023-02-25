@@ -86,7 +86,8 @@ body {
       @include flex(flex-start, flex-start);
       flex-direction: column;
       grid-gap: 20px;
-      background: $abalone;
+      background: $white;
+      border: 1px solid $abalone;
 
       &:hover {
         @include boxShadow();
