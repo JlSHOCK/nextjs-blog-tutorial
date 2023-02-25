@@ -1,0 +1,37 @@
+// margin/padding
+// ----------------------------------------------
+@mixin marginPadding($margin, $padding) {
+  margin: $margin;
+  padding: $padding;
+}
+
+// flexbox
+// ----------------------------------------------
+@mixin flex($content, $align) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+}
+
+// grid
+// ----------------------------------------------
+@mixin grid($gap) {
+  display: grid;
+  grid-gap: $gap;
+}
+
+// box shadow
+// ----------------------------------------------
+@mixin boxShadow() {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // -webkit-box-shadow: 0px 6px 17px -5px rgba(0, 0, 0, 0.35);
+  // -moz-box-shadow: 0px 6px 17px -5px rgba(0, 0, 0, 0.35);
+}
+
+// full image
+// ----------------------------------------------
+@mixin fullWidthImage() {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,57 @@
+import fs from 'fs'
+import matter from 'gray-matter'
+import Link from 'next/link'
+import Layout from '../../components/Layout'
+
+const Blog = ({ blogs }) => {
+  return (
+    <Layout
+      pageClass="blog"
+      title="Blog"
+      description=""
+    >
+      <section>
+        <div className={`container`}>
+          <h1 className={`title size-h-xxl`}>Blog</h1>
+          <ul className={'blog-items'}>
+            {blogs.map(blog => (
+              <li key={blog.slug} className={'blog-item'}>
+                <Link href={`/blog/${blog.slug}`}>
+                  <a className={'blog-item-link'}>
+                    <span className={'blog-item-title size-h-m weight-600'}>{blog.title}</span>
+                    <span className={'blog-item-date size-p-m weight-400'}>{blog.date}</span>
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    </Layout >
+  );
+}
+
+export async function getStaticProps() {
+  // List of files in blgos folder
+  const filesInBlogs = fs.readdirSync('./content/blogs')
+
+  // Get the front matter and slug (the filename without .md) of all files
+  const blogs = filesInBlogs.map(filename => {
+    const file = fs.readFileSync(`./content/blogs/${filename}`, 'utf8')
+    const matterData = matter(file)
+
+    return {
+      ...matterData.data, // matterData.data contains front matter
+      slug: filename.slice(0, filename.indexOf('.'))
+    }
+  })
+
+  return {
+    props: {
+      blogs
+    }
+  }
+
+}
+
+export default Blog;

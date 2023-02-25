@@ -1,0 +1,99 @@
+// fonts
+// ----------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bamum:wght@400;500;600;700&display=swap');
+
+// font sizes
+// ----------------------------------------------------------
+@mixin globalFontSize($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+.size-h-xxl {
+  @include globalFontSize(54px, 56px);
+  letter-spacing: -1px;
+
+  @media screen and (min-width: 600px) {
+    @include globalFontSize(75px, 72px);
+    letter-spacing: -1.5px;
+  }
+}
+
+.size-h-xl {
+  @include globalFontSize(48px, 52px);
+  letter-spacing: -1px;
+
+  @media screen and (min-width: 600px) {
+    @include globalFontSize(56px, 57px);
+    letter-spacing: -1.25px;
+  }
+}
+
+.size-h-l {
+  @include globalFontSize(38px, 42px);
+  letter-spacing: -.75px;
+
+  @media screen and (min-width: 600px) {
+    @include globalFontSize(48px, 52px);
+    letter-spacing: -1px;
+  }
+}
+
+.size-h-m {
+  @include globalFontSize(36px, 40px);
+  letter-spacing: -.75px;
+}
+
+.size-h-s {
+  @include globalFontSize(25px, 34px);
+  letter-spacing: -.25px;
+}
+
+.size-p-l {
+  @include globalFontSize(21px, 32px);
+}
+
+.size-p-m {
+  @include globalFontSize(18px, 27px);
+}
+
+.size-p-s {
+  @include globalFontSize(17px, 25px);
+}
+
+.size-p-xs {
+  @include globalFontSize(15px, 20px);
+  letter-spacing: -0.25px;
+}
+
+// font weights
+// ----------------------------------------------------------
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-500 {
+  font-weight: 500;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+// font styles
+// ----------------------------------------------------------
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.italic {
+  font-style: italic;
+}

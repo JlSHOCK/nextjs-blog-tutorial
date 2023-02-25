@@ -1,25 +1,29 @@
 import fs from 'fs'
 import ReactMarkdown from 'react-markdown'
 import matter from 'gray-matter'
-import Head from 'next/head'
-import styles from '../../styles/Blog.module.css'
+import Layout from '../../components/Layout'
 
-export default function Blog({ frontmatter, markdown}) {
+const Article = ({ frontmatter, markdown }) => {
 	return (
-		<div className={styles['container']}>
-			<Head>
-      	<title>Demo Blog | {frontmatter.title}</title>
-    	</Head>
-			<h1 className={styles['title']}>{frontmatter.title}</h1>
-			<span>{frontmatter.date}</span>
-			<hr />
-			<div className={styles['wrapper']}>
-				<ReactMarkdown>
-					{markdown}
-				</ReactMarkdown>
-			</div>
-		</div>
-	)
+		<Layout
+			pageClass="article"
+			title={frontmatter.title}
+			description=""
+		>
+			<section>
+				<div className={`container`}>
+					<h1 className={`blog-title size-h-xxl`}>{frontmatter.title}</h1>
+					<p className={'blog-date size-p-l weight-400'}>{frontmatter.date}</p>
+					<hr />
+					<div className={`blog-content`}>
+						<ReactMarkdown>
+							{markdown}
+						</ReactMarkdown>
+					</div>
+				</div>
+			</section>
+		</Layout >
+	);
 }
 
 export async function getStaticProps({ params: { slug } }) {
@@ -45,7 +49,7 @@ export async function getStaticPaths() {
 	// ]
 	const paths = filesInProjects.map(file => {
 		const filename = file.slice(0, file.indexOf('.'))
-		return { params: { slug: filename }}
+		return { params: { slug: filename } }
 	})
 
 	return {
@@ -53,3 +57,5 @@ export async function getStaticPaths() {
 		fallback: false // This shows a 404 page if the page is not found
 	}
 }
+
+export default Article;

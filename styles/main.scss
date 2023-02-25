@@ -1,0 +1,114 @@
+@import "./styles.scss";
+
+// defaults
+// ----------------------------------------------------------
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans Bamum', sans-serif;
+  color: $black;
+}
+
+body * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  transition: all .25s;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section,
+figure,
+figcaption {
+  @include marginPadding(0, 0);
+}
+
+ul,
+li {
+  @include marginPadding(0, 0);
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.container {
+  @include marginPadding(0 auto, 0 30px);
+  max-width: 1260px;
+}
+
+.page-main {
+  margin-top: 80px;
+  padding: 40px 0;
+}
+
+.home {
+  background: $wave;
+  min-height: 100vh;
+}
+
+.blog {
+  background: $wave;
+  min-height: 100vh;
+}
+
+.article {
+  background: $wave;
+  min-height: 100vh;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.blog-items {
+  @include marginPadding(0, 0);
+  @include grid(30px);
+
+  .blog-item {
+    position: relative;
+    @include marginPadding(0, 0);
+
+    .blog-item-link {
+      @include marginPadding(0, 30px);
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      grid-gap: 10px;
+      background: $abalone;
+
+      &:hover {
+        @include boxShadow();
+      }
+    }
+  }
+}
+
+.blog-title {
+  margin-bottom: 20px;
+}
+
+.blog-date {
+  margin-bottom: 50px;
+}
+
+.blog-content {
+  margin-top: 50px;
+}
