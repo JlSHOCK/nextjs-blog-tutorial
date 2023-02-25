@@ -25,23 +25,23 @@ collections:
       - {label: "Product Name", name: "name", widget: "string"}
       - {label: "Product Link", name: "link", widget: "string"}
       - {label: "Product Category", name: "category", widget: "select", options: ["One", "Two", "Three"]}
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "Home Page"
-        name: "about"
-        file: "site/content/home.yml"
-        fields:
-          - {label: Title, name: title, widget: string}
-      - label: "About Page"
-        name: "about"
-        file: "site/content/about.yml"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+  # - label: "Pages"
+  #   name: "pages"
+  #   files:
+  #     - label: "Home Page"
+  #       name: "about"
+  #       file: "site/content/home.yml"
+  #       fields:
+  #         - {label: Title, name: title, widget: string}
+  #     - label: "About Page"
+  #       name: "about"
+  #       file: "site/content/about.yml"
+  #       fields:
+  #         - {label: Title, name: title, widget: string}
+  #         - label: Team
+  #           name: team
+  #           widget: list
+  #           fields:
+  #             - {label: Name, name: name, widget: string}
+  #             - {label: Position, name: position, widget: string}
+  #             - {label: Photo, name: photo, widget: image}
