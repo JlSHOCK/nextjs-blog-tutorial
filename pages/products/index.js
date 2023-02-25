@@ -6,7 +6,7 @@ import Layout from '../../components/Layout'
 const Products = ({ products }) => {
   return (
     <Layout
-      pageClass="products"
+      pageClass="product"
       title="Products"
       description=""
     >
@@ -24,18 +24,27 @@ const Products = ({ products }) => {
                   <img src={product.image ? product.image : "/images/placeholder-product.png"} alt={product.name} className={`product-img`} />
                 </div>
                 <div className={'product-content'}>
-                  <h3 className={'product-name size-p-l weight-600'}>{product.name}</h3>
                   {
                     product.company &&
-                    <p className={'product-company size-p-m weight-300'}>{product.company}</p>
+                    <p className={'product-company size-p-s weight-400'}>{product.company}</p>
                   }
-                  {
-                    product.category &&
-                    <div className={'product-categories'}>
-                      <p className={'product-category weight-800'}>{product.category}</p>
-                    </div>
-                  }
+                  <h3 className={'product-name size-p-l weight-700'}>{product.name}</h3>
+                  {/* {
+                    product.link &&
+                    <button className={`product-cta-btn size-p-m weight-800`}>
+                      Buy Now
+                    </button>
+                  } */}
                 </div>
+                {
+                  product.category &&
+                  <div className={'product-categories'}>
+                    {
+                      product.category.map(catgry => (
+                        <p className={'product-category weight-700'}>{catgry}</p>
+                      ))}
+                  </div>
+                }
               </li>
             ))}
           </ul>

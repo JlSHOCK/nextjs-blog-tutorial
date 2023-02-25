@@ -19,13 +19,12 @@
 .logo_container {
   @include marginPadding(0, 0);
   flex: none;
+  width: 180px;
 }
 
 .logo {
+  margin-top: 5px;
   @include fullWidthImage();
-  max-height: 70px;
-  object-position: left center;
-  object-fit: contain;
 }
 
 .nav {
@@ -37,7 +36,7 @@
   @include marginPadding(0, 0);
   display: none;
 
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 900px) {
     @include flex(flex-end, center);
   }
 
@@ -53,7 +52,7 @@
       color: $black;
 
       &:hover {
-        color: $ochre;
+        background: #fafafa;
       }
     }
   }
