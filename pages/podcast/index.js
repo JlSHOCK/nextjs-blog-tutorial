@@ -1,19 +1,19 @@
 import Layout from '../../components/Layout'
 
-const Learn = () => {
+const Podcast = () => {
   return (
     <Layout
-      pageClass="learn"
-      title="Learn"
+      pageClass="podcast"
+      title="Podcast"
       description=""
     >
       <section>
         <div className={`container`}>
-          <h1 className={`title size-h-xxl weight-600`}>Learn</h1>
+          <h1 className={`title size-h-xxl weight-600`}>Podcast</h1>
         </div>
       </section>
     </Layout >
   );
 }
 
-export default Learn;
+export default Podcast;

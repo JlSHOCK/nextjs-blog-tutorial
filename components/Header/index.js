@@ -40,7 +40,7 @@ const Header = () => {
                     <button className="cta_btn">
                         <Link href="/">
                             <a className="cta_btn_link size-p-m weight-800">
-                                CREATE
+                                GET STARTED
                             </a>
                         </Link>
                     </button>

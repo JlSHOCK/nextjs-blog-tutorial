@@ -14,7 +14,7 @@ const Nav = ({ setMobileNavStatus }) => {
                 <li className="nav-item nav-item-mobile">
                     <Link href="/client-resources">
                         <a className="nav-item-link weight-700" onClick={hideMobileNav}>
-                            <span>Create</span>
+                            <span>GET STARTED</span>
                         </a>
                     </Link>
                 </li>

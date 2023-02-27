@@ -6,11 +6,15 @@ const HeaderNavItems = [
             subnavItems: [
                 {
                     title: "Nutritional Therapy",
-                    link: "/about"
+                    link: "/nutritional-therapy"
                 },
                 {
                     title: "Meet The Team",
-                    link: "/about"
+                    link: "/team"
+                },
+                {
+                    title: "Contact",
+                    link: "/contact"
                 }
             ]
         }
@@ -36,12 +40,12 @@ const HeaderNavItems = [
         }
     },
     {
-        title: "Learn",
-        link: "/learn",
+        title: "Resources",
+        link: "/resources",
         subnav: {
             subnavItems: [
                 {
-                    title: "Articles",
+                    title: "Blog",
                     link: "/blog"
                 },
                 {

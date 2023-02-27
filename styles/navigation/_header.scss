@@ -110,7 +110,7 @@ $copyGray: #6C6762;
           &:hover {
             .nav-item {
               .nav-item-link {
-                opacity: .5;
+                opacity: .25;
               }
             }
           }
@@ -146,7 +146,6 @@ $copyGray: #6C6762;
           }
 
           @media screen and (min-width: $headerMobileWidth) {
-            @include flex(center, center);
             width: auto;
 
             &:hover,
@@ -167,22 +166,13 @@ $copyGray: #6C6762;
           }
 
           &.nav-item-mobile {
-            display: block;
-
-            @media screen and (min-width: $headerMobileWidth) {
-              display: none;
-            }
-          }
-
-          &.nav-item-pricing {
-            display: block;
+            @include flex(center, center);
 
             .nav-item-link {
-              font-size: 16px;
-              line-height: 27px;
-              letter-spacing: .75px;
-              font-weight: 700;
+              font-weight: bold;
               color: $white;
+              text-align: center;
+              text-transform: uppercase;
               background: $apricot;
             }
 
@@ -195,32 +185,32 @@ $copyGray: #6C6762;
             @include marginPadding(0, 0 30px);
             @include flex(space-between, center);
             height: 80px;
-            font-size: 14px;
             color: $black;
             width: 100%;
             transition: background .25s;
 
             @media screen and (min-width: $headerMobileWidth) {
               @include flex(center, center);
-              @include marginPadding(0, 0 10px);
+              @include marginPadding(0, 0 15px);
               text-align: center;
               color: $black;
               transition: all .25s;
             }
-
-            @media screen and (min-width: 1000px) {
-              @include marginPadding(0, 0 15px);
-              color: $black;
-            }
           }
 
           .nav-arrow-down {
+            margin-left: 4px;
             width: 20px;
             height: auto;
             transition: all .25s;
 
+            @media screen and (min-width: $headerMobileWidth) {
+              width: 15px;
+            }
+
             .nav-arrow-down-fill {
               fill: $black;
+              opacity: .5;
               transition: all .25s;
             }
           }
@@ -246,231 +236,90 @@ $copyGray: #6C6762;
       .nav-item {
         &.active {
           .subnav {
-            @include grid(0 30px);
-            grid-template-columns: 1fr;
-
-            @media screen and (min-width: 900px) {
-              @include grid(30px);
-              grid-template-columns: repeat(2, 1fr);
-            }
+            display: block;
           }
         }
       }
 
       .subnav {
         display: none;
-        @include marginPadding(0, 0 30px);
+        @include marginPadding(0, 0);
         position: static;
         background: $white;
         border: none;
 
-        &.subnav-product,
-        &.subnav-why-kantata,
-        &.subnav-resources {
-          .subnav-items {
-            grid-template-areas: unset;
-            grid-template-columns: 1fr;
-            grid-template-rows: unset;
-
-            .subnav-item {
-              &.item-1 {
-                grid-area: unset;
-              }
-
-              &.item-2 {
-                grid-area: unset;
-              }
-
-              &.item-3 {
-                grid-area: unset;
-              }
-
-              &.item-4 {
-                grid-area: unset;
-              }
-
-              &.item-5 {
-                grid-area: unset;
-              }
-
-              &.item-6 {
-                grid-area: unset;
-              }
-            }
-          }
-        }
-
-        @media screen and (min-width: 500px) {
-          &.subnav-product {
-            .subnav-items {
-              grid-template-areas: "one four"
-                "two five"
-                "three six";
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 1fr 1fr;
-
-              .subnav-item {
-                &.item-1 {
-                  grid-area: one;
-                }
-
-                &.item-2 {
-                  grid-area: two;
-                }
-
-                &.item-3 {
-                  grid-area: three;
-                }
-
-                &.item-4 {
-                  grid-area: four;
-                }
-
-                &.item-5 {
-                  grid-area: five;
-                }
-
-                &.item-6 {
-                  grid-area: six;
-                }
-              }
-            }
-          }
-
-          &.subnav-why-kantata,
-          &.subnav-resources {
-            .subnav-items {
-              grid-template-areas: "one three"
-                "two four";
-              grid-template-columns: 1fr 1fr;
-              grid-template-rows: 1fr 1fr;
-
-              .subnav-item {
-                &.item-1 {
-                  grid-area: one;
-                }
-
-                &.item-2 {
-                  grid-area: two;
-                }
-
-                &.item-3 {
-                  grid-area: three;
-                }
-
-                &.item-4 {
-                  grid-area: four;
-                }
-              }
-            }
-          }
-        }
-
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: $headerMobileWidth) {
+          @include marginPadding(0 0 0 -15px, 0);
           position: absolute;
           top: 80px;
-          left: -0px;
-          right: -0px;
-          min-height: 245px;
           border: 1px solid $lightGray;
           z-index: 3;
+          min-width: 240px;
         }
 
         .subnav-items {
-          @include marginPadding(0, 30px 0);
-          @include grid(5px);
-          grid-template-columns: 1fr 1fr;
+          @include marginPadding(0, 0);
 
           .subnav-item {
+            &:last-child {
+              .subnav-item-link {
+                border: none;
+              }
+            }
+
             .subnav-item-link {
-              @include marginPadding(0, 15px);
-              @include flex(flex-start, flex-start);
+              @include marginPadding(0, 30px);
+              @include flex(center, flex-start);
               flex-direction: column;
+              height: 80px;
               transition: all .25s;
+              border-bottom: 1px solid $lightGray;
+
+              @media screen and (min-width: $headerMobileWidth) {
+                @include marginPadding(0, 25px 30px);
+                @include flex(flex-start, flex-start);
+                height: auto;
+              }
 
               &:hover {
                 background: $lightGray;
               }
 
               .subnav-item-title {
-                @include marginPadding(0 0 5px, 0);
-                font-size: 14px;
-                line-height: 19px;
-                font-weight: 600;
+                @include marginPadding(0, 0);
                 color: $black;
               }
-
-              .subnav-item-copy {
-                @include marginPadding(0, 0);
-                font-size: 14px;
-                line-height: 20px;
-                font-weight: 400;
-                color: $copyGray;
-              }
-            }
-          }
-        }
-
-        .subnav-featured {
-          display: none;
-          @include marginPadding(0 -30px, 30px);
-          grid-gap: 30px;
-          height: 100%;
-          background: $abalone;
-
-          @media screen and (min-width: 500px) {
-            @include flex(flex-start, flex-start);
-          }
-
-          @media screen and (min-width: 900px) {
-            @include marginPadding(0 -30px 0 0, 30px);
-          }
-
-          .subnav-featured-image-container {
-            flex: none;
-            width: 150px;
-
-            .subnav-featured-image {
-              @include fullWidthImage();
-            }
-          }
-
-          .subnav-featured-content {
-            margin-top: 20px;
-            flex: 1;
-
-            .subnav-featured-title {
-              @include marginPadding(0 0 5px, 0);
-              font-size: 18px;
-              line-height: 24px;
-              font-weight: 700;
-              color: $black;
-            }
-
-            .subnav-featured-copy {
-              @include marginPadding(0, 0);
-              font-size: 14px;
-              line-height: 25px;
-              font-weight: 400;
-              color: $copyGray;
             }
           }
         }
       }
     }
 
-    .nav-btns {
-      @include marginPadding(0, 0 30px 0 0);
-      @include flex(center, center);
-      grid-gap: 25px;
+    .cta_btn {
+      @include marginPadding(0 0 0 20px, 0);
+      display: none;
 
-      @media screen and (min-width: $headerMobileWidth) {
-        @include marginPadding(0, 0 0 0 15px);
+      @media screen and (min-width: 500px) {
+        display: block;
+      }
+
+      .cta_btn_link {
+        @include marginPadding(0, 15px 20px);
+        @include flex(center, center);
+        font-weight: bold;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+        background: $apricot;
+
+        &:hover {
+          background: $sunrise;
+        }
       }
     }
 
     .nav-mobile-btn {
-      @include marginPadding(0, 0);
+      @include marginPadding(0 0 0 25px, 0);
       @include flex(center, center);
       height: 80px;
       font-size: 24px;

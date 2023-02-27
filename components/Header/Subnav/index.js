@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import getWindowWidth from '../../Utils/getWindowWidth.js';
 
-const Subnav = ({ navItemTitle, subnav, setIsActive, hideMobileNav }) => {
+const Subnav = ({ subnav, setIsActive, hideMobileNav }) => {
     const _onClick = () => {
         let windowWidth = getWindowWidth();
 
@@ -13,17 +13,17 @@ const Subnav = ({ navItemTitle, subnav, setIsActive, hideMobileNav }) => {
     }
 
     return (
-        <div className={`subnav ${navItemTitle && `subnav-${navItemTitle}`}`}>
+        <div className={`subnav`}>
             {
                 subnav.subnavItems &&
                 <ul className="subnav-items">
                     {
-                        subnav.subnavItems.map(({ title, copy, link }, i) => {
+                        subnav.subnavItems.map(({ title, link }, i) => {
                             return (
                                 <li className={`subnav-item item-${i + 1}`} key={`subnav-item-${i}`}>
                                     <Link href={link}>
-                                        <a className="subnav-item-link weight-900" onClick={_onClick}>
-                                            <span className="subnav-item-title">{title}</span>
+                                        <a className="subnav-item-link size-p-s weight-500" onClick={_onClick}>
+                                            <span className="subnav-item-title size-p-s weight-500">{title}</span>
                                         </a>
                                     </Link>
                                 </li>
