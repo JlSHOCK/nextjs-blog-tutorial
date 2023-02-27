@@ -22,6 +22,8 @@ collections:
     folder: "content/products" 
     create: true
     add_to_top: true
+    editor:
+      preview: false
     slug: "{{slug}}"
     fields:
       - {label: "Product Image", name: image, widget: image, default: "/images/placeholder-product.png"}
