@@ -75,15 +75,25 @@ collections:
             fields:
               - { label: "Platform", name: "platform", widget: "string"} 
               - { label: "Link", name: "link", widget: "string"}   
-  - name: "prods"
-    label: "Prods"
+  - name: "uploads"
+    label: "Uploads"
     editor:
       preview: false
-    file: "content/prods.md"
-    add_to_top: true
-    widget: list  
-    fields:              
-      - {label: "Product Image", name: image, widget: image, default: "/images/placeholder-product.png"}
-      - {label: "Product Name", name: "name", widget: "string"}
-      - { label: "Text", name: "text", widget: "string"} 
-      - { label: "PDF Google Link", name: "link", widget: "string"}                         
+    - label: "Productz"
+      name: "productz"
+      file: "content/productz.md"
+      fields:         
+        - label: "Prod"
+          name: "prod"
+          widget: list   
+          add_to_top: true                 
+          fields:              
+            - { label: "Text", name: "text", widget: "string"} 
+            - { label: "PDF Google Link", name: "link", widget: "string"}                
+            - label: "Date"
+              name: "date"
+              widget: "datetime"
+              default: ""
+              date_format: "MM/DD/YYYY"
+              format: "LL"
+              picker_utc: false 
