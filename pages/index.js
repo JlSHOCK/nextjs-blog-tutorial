@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { attributes as HomeContent } from '../content/home.md';
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
     >
       <section>
         <div className={`container`}>
-          <h1 className={`title size-h-xxl weight-600`}>Home</h1>
+          <h1 className={`title size-h-xxl weight-600`}>{HomeContent ? HomeContent.title : "Hello World"}</h1>
         </div>
       </section>
     </Layout >
