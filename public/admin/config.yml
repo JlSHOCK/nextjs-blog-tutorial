@@ -38,7 +38,7 @@ collections:
         name: "home"
         file: "content/home.md"
         fields:
-          - { label: "Page Title", name: "title", widget: "string", default: "Welcome to Our Savior Evangelical Lutheran Church"}              
+          - { label: "Page Title", name: "title", widget: "string", default: "Home"}              
           - {label: "Featured Image", name: "featuredImage", widget: "image",  default: "images/placeholder-product.png", choose_url: false}   
           - label: "Buttons"
             name: "buttons"
@@ -66,6 +66,7 @@ collections:
         name: "contact"
         file: "content/contact.md"
         fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Contact"}  
           - { label: "Phone", name: "phone", widget: "string"}
           - { label: "Email", name: "email", widget: "string"}
           - label: "Socials"
@@ -74,3 +75,26 @@ collections:
             fields:
               - { label: "Platform", name: "platform", widget: "string"} 
               - { label: "Link", name: "link", widget: "string"}   
+  - name: "uploads"
+    label: "Uploads"
+    editor:
+      preview: false
+    files:
+      - label: "Weekly Bulletin"
+        name: "bulletin"
+        file: "content/bulletin.md"
+        fields:         
+          - label: "Prods"
+            name: "prods"
+            widget: list   
+            add_to_top: true                 
+            fields:              
+              - { label: "Text", name: "text", widget: "string"} 
+              - { label: "PDF Google Link", name: "link", widget: "string"}                
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+                default: ""
+                date_format: "MM/DD/YYYY"
+                format: "LL"
+                picker_utc: false 
