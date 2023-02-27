@@ -7,6 +7,28 @@ public_folder: "/uploads"
 publish_mode: editorial_workflow
 
 collections:
+  - label: 'Home Section'
+  name: 'sections'
+  widget: 'list'
+  types:
+    - label: 'Carousel'
+      name: 'carousel'
+      widget: object
+      summary: '{{fields.header}}'
+      fields:
+        - { label: Header, name: header, widget: string, default: 'Image Gallery' }
+        - { label: Template, name: template, widget: string, default: 'carousel.html' }
+        - label: Images
+          name: images
+          widget: list
+          field: { label: Image, name: image, widget: image }
+    - label: 'Spotlight'
+      name: 'spotlight'
+      widget: object
+      fields:
+        - { label: Header, name: header, widget: string, default: 'Spotlight' }
+        - { label: Template, name: template, widget: string, default: 'spotlight.html' }
+        - { label: Text, name: text, widget: text, default: 'Hello World' }
   - name: "blog"
     label: "Blog"
     folder: "content/blogs"
@@ -21,9 +43,9 @@ collections:
     label: "Products"
     folder: "content/products" 
     create: true
-    add_to_top: true
     editor:
       preview: false
+    add_to_top: true
     slug: "{{slug}}"
     fields:
       - {label: "Product Image", name: image, widget: image, default: "/images/placeholder-product.png"}
@@ -31,8 +53,8 @@ collections:
       - {label: "Product Company", name: "company", widget: "string"}
       - {label: "Product Link", name: "link", widget: "string"}
       - {label: "Product Category", name: "category", widget: "select", multiple: true, options: ["Ctgry 1", "Ctgry 2", "Ctgry 3"], required: false}
-  - name: "content"
-    label: "Content"
+  - name: "pages"
+    label: "Pages"
     editor:
       preview: false
     files:
