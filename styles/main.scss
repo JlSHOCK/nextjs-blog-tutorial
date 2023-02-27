@@ -136,6 +136,11 @@ body {
       @include marginPadding(0, 30px);
       width: 100%;
       background: $white;
+      display: none;
+
+      @media screen and (min-width: 640px) {
+        display: block;
+      }
 
       .product-img {
         @include fullWidthImage();
@@ -146,7 +151,7 @@ body {
     }
 
     .product-content {
-      @include marginPadding(0, 30px 30px 40px);
+      @include marginPadding(0, 30px 30px 0);
       flex: 1;
       width: 100%;
       background: $abalone;
@@ -162,7 +167,7 @@ body {
       }
 
       .product-cta-btn {
-        @include marginPadding(30px 0 0, 10px 20px);
+        @include marginPadding(20px 0 10px, 10px 20px);
         @include flex(center, center);
         font-weight: bold;
         color: $white;
@@ -176,20 +181,20 @@ body {
     }
 
     .product-categories {
-      @include marginPadding(0, 0 30px 30px);
+      @include marginPadding(0, 20px 30px 30px);
       @include flex(flex-start, center);
       grid-gap: 10px;
       widtH: 100%;
       background: $abalone;
 
       .product-category {
-        @include marginPadding(0, 7px 10px);
+        @include marginPadding(0, 5px 10px);
         font-size: 12px;
         color: $black;
         letter-spacing: 1px;
 
         text-transform: uppercase;
-        background: $sunrise;
+        background: $white;
       }
     }
   }

@@ -40,8 +40,18 @@
     @include flex(flex-end, center);
   }
 
+  &:hover {
+    .nav_item {
+      opacity: .25;
+    }
+  }
+
   .nav_item {
     @include marginPadding(0, 0);
+
+    &:hover {
+      opacity: 1;
+    }
 
     .nav_item_link {
       @include marginPadding(0, 0 15px);
@@ -50,10 +60,6 @@
       text-align: center;
       height: 80px;
       color: $black;
-
-      &:hover {
-        background: #fafafa;
-      }
     }
   }
 }
