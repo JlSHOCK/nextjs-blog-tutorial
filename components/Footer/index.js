@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Socials from '../Socials';
 import Link from 'next/link';
 import Popup from "reactjs-popup";
-import { attributes as DisclaimerContent } from '../../content/disclaimer.md';
+// import { attributes as DisclaimerContent } from '../../content/disclaimer.md';
 
 const Footer = () => {
     const [popupStatus, setPopupStatus] = useState(false);
@@ -50,12 +50,12 @@ const Disclaimer = ({ popupStatus, closePopup }) => {
             <button className="close" onClick={closePopup}></button>
 
             <div className={'disclaimer-popup'}>
-                <h6 className={'disclaimer-popup-title size-h-m weight-700'}>
+                {/* <h6 className={'disclaimer-popup-title size-h-m weight-700'}>
                     {DisclaimerContent ? DisclaimerContent.title : "Disclaimer"}
                 </h6>
                 <div className={'disclaimer-popup-copy size-p-m weight-400'}>
                     {DisclaimerContent.copy}
-                </div>
+                </div> */}
             </div>
         </Popup>
     );
