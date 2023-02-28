@@ -79,19 +79,30 @@ body {
 
   .blog-item {
     position: relative;
-    @include marginPadding(0, 0);
+    @include marginPadding(0, 30px);
+    height: 100%;
+    background: $white;
+    border: 1px solid $abalone;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    grid-gap: 15px;
+
+    &:hover {
+      @include boxShadow();
+    }
 
     .blog-item-link {
-      @include marginPadding(0, 30px);
-      @include flex(flex-start, flex-start);
-      flex-direction: column;
-      grid-gap: 20px;
-      background: $white;
-      border: 1px solid $abalone;
+      @include marginPadding(0, 0);
+      @include absoluteLink();
+    }
 
-      &:hover {
-        @include boxShadow();
-      }
+    .blog-item-date {
+      @include marginPadding(0, 0);
+      text-transform: uppercase;
+    }
+
+    .blog-item-title {
+      @include marginPadding(0, 0);
     }
   }
 }
@@ -206,22 +217,34 @@ body {
 .podcast-items {
   @include marginPadding(0, 0);
   @include grid(30px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
   .podcast-item {
     position: relative;
-    @include marginPadding(0, 0);
+    @include marginPadding(0, 30px);
+    height: 100%;
+    background: $white;
+    border: 1px solid $abalone;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    grid-gap: 15px;
+
+    &:hover {
+      @include boxShadow();
+    }
 
     .podcast-item-link {
-      @include marginPadding(0, 30px);
-      @include flex(flex-start, flex-start);
-      flex-direction: column;
-      grid-gap: 20px;
-      background: $white;
-      border: 1px solid $abalone;
+      @include marginPadding(0, 0);
+      @include absoluteLink();
+    }
 
-      &:hover {
-        @include boxShadow();
-      }
+    .podcast-item-episode {
+      @include marginPadding(0, 0);
+      text-transform: uppercase;
+    }
+
+    .podcast-item-title {
+      @include marginPadding(0, 0);
     }
   }
 }

@@ -16,12 +16,9 @@ const Blog = ({ blogs }) => {
           <ul className={'blog-items'}>
             {blogs.map(blog => (
               <li key={blog.slug} className={'blog-item'}>
-                <Link href={`/blog/${blog.slug}`}>
-                  <a className={'blog-item-link'}>
-                    <span className={'blog-item-title size-h-m weight-300'}>{blog.title}</span>
-                    <span className={'blog-item-date size-p-xs weight-700'}>{blog.date}</span>
-                  </a>
-                </Link>
+                <Link href={`/blog/${blog.slug}`}><a className={'blog-item-link'}></a></Link>
+                <h3 className={'blog-item-title size-h-m weight-300'}>{blog.title}</h3>
+                <p className={'blog-item-date size-p-xs weight-700'}>{blog.date}</p>
               </li>
             ))}
           </ul>

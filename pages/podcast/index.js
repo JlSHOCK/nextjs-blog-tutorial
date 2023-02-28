@@ -13,15 +13,12 @@ const Podcast = ({ podcasts }) => {
       <section>
         <div className={`container`}>
           <h1 className={`title size-h-xxl weight-600`}>Podcast</h1>
-          <ul className={'blog-items'}>
+          <ul className={'podcast-items'}>
             {podcasts.map(podcast => (
-              <li key={podcast.slug} className={'blog-item'}>
-                <Link href={`/podcast/${podcast.slug}`}>
-                  <a className={'blog-item-link'}>
-                    <span className={'blog-item-date size-p-xs weight-700'}>Episode {podcast.episode}</span>
-                    <span className={'blog-item-title size-h-m weight-300'}>{podcast.title}</span>
-                  </a>
-                </Link>
+              <li key={podcast.slug} className={'podcast-item'}>
+                <Link href={`/podcast/${podcast.slug}`}><a className={'podcast-item-link'}></a></Link>
+                <h3 className={'podcast-item-episode size-p-xs weight-700'}>Episode {podcast.episode}</h3>
+                <p className={'podcast-item-title size-h-m weight-300'}>{podcast.title}</p>
               </li>
             ))}
           </ul>
