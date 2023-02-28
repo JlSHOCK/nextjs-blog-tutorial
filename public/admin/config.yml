@@ -74,7 +74,7 @@ collections:
       - {label: "Product Category", name: "category", widget: "select", multiple: true, options: ["Ctgry 1", "Ctgry 2", "Ctgry 3"], required: false}
   - name: "podcast"
     label: "Podcast"
-    folder: "content/podcasts"
+    folder: "content/podcast"
     create: true
     editor:
       preview: false
@@ -86,7 +86,7 @@ collections:
       - {label: "Podcast ID", name: "id", widget: "string"}
   - name: "blog"
     label: "Blog"
-    folder: "content/blogs"
+    folder: "content/blog"
     create: true
     add_to_top: true
     slug: "{{slug}}"

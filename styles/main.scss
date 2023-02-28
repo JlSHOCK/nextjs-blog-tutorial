@@ -201,6 +201,31 @@ body {
   }
 }
 
+// podcast
+// ----------------------------------------------------------
+.podcast-items {
+  @include marginPadding(0, 0);
+  @include grid(30px);
+
+  .podcast-item {
+    position: relative;
+    @include marginPadding(0, 0);
+
+    .podcast-item-link {
+      @include marginPadding(0, 30px);
+      @include flex(flex-start, flex-start);
+      flex-direction: column;
+      grid-gap: 20px;
+      background: $white;
+      border: 1px solid $abalone;
+
+      &:hover {
+        @include boxShadow();
+      }
+    }
+  }
+}
+
 // about
 // ----------------------------------------------------------
 .members {
