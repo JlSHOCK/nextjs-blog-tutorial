@@ -81,6 +81,7 @@ collections:
     add_to_top: true
     slug: "{{slug}}"
     fields:
+      - {label: "Episode Number", name: "episode", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Podcast ID", name: "id", widget: "string"}
   - name: "blog"
