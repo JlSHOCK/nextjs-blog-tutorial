@@ -13,7 +13,9 @@
     "next": "^12.1.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-markdown": "6.0.3"
+    "react-markdown": "6.0.3",
+    "react-html-parser": "^2.0.2",
+    "reactjs-popup": "^2.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

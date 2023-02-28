@@ -201,7 +201,7 @@ body {
   }
 }
 
-// team
+// about
 // ----------------------------------------------------------
 .members {
   @include marginPadding(0, 0);
@@ -215,6 +215,7 @@ body {
     flex-direction: column;
     background: $white;
     border: 1px solid $abalone;
+    cursor: pointer;
 
     &:hover {
       @include boxShadow();
@@ -250,6 +251,113 @@ body {
         @include marginPadding(5px 0 0, 0);
         text-transform: uppercase;
         letter-spacing: -.5px;
+      }
+    }
+  }
+}
+
+.member-popup {
+  @include marginPadding(0, 60px 20px);
+  @include flex(flex-start, flex-start);
+  flex-direction: column;
+  grid-gap: 40px 60px;
+
+  @media screen and (min-width: 800px) {
+    @include marginPadding(0, 50px);
+  }
+
+  @media screen and (min-width: 800px) {
+    @include flex(flex-start, flex-start);
+    flex-direction: row;
+  }
+
+  .member-popup-img-container {
+    @include marginPadding(0, 0);
+    width: 100%;
+    flex: 1;
+    max-width: 400px;
+    background: $white;
+
+    .member-popup-img {
+      @include fullWidthImage();
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .member-popup-content {
+    flex: 1;
+
+    .member-popup-name {
+      @include marginPadding(0, 0);
+    }
+
+    .member-popup-title {
+      @include marginPadding(5px 0 0, 0);
+      text-transform: uppercase;
+      letter-spacing: -.5px;
+    }
+
+    .member-popup-copy {
+      @include marginPadding(30px 0 0, 0);
+    }
+  }
+}
+
+// popup
+// ----------------------------------------------------------
+.popup-overlay {
+  @include marginPadding(0, 20px);
+  background: rgba(0, 0, 0, .8) !important;
+  z-index: 99999 !important;
+  @include flex(center, flex-start);
+  overflow-y: auto;
+
+  @media screen and (min-width: 600px) and (min-height: 675px) {
+    @include flex(center, center);
+  }
+
+  .popup-content {
+    @include marginPadding(0 auto, 20px);
+    flex: 1;
+    max-width: 900px;
+    min-height: 500px;
+    background: $white;
+
+    .close {
+      @include marginPadding(0, 0);
+      grid-column: 1/-1;
+      font-weight: normal;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 30px;
+      height: 30px;
+      border: none !important;
+      background: none !important;
+      outline: none !important;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        height: 100%;
+        width: 2px;
+        background: $black;
+        position: absolute;
+        top: 0;
+        left: 14px;
+        transform: rotate(-135deg);
+      }
+
+      &:after {
+        content: "";
+        height: 100%;
+        width: 2px;
+        background: $black;
+        position: absolute;
+        top: 0;
+        right: 14px;
+        transform: rotate(135deg);
       }
     }
   }

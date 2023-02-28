@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Socials from '../Socials';
 import Link from 'next/link';
+import Popup from "reactjs-popup";
 
 const Footer = () => {
+    const [popupStatus, setPopupStatus] = useState(false);
+
+    const openPopup = (e) => {
+        e.preventDefault();
+        setPopupStatus(true);
+    }
+
+    const closePopup = () => {
+        setPopupStatus(false);
+    }
+
     return (
         <footer className="footer" id="site-footer">
             <div className="footer-container container">
                 <ul className="footer-legal-items">
                     <li className="footer-legal-item weight-500">
-                        <Link href="/">
-                            <a className="footer-legal-link">
+                        <Link href="#">
+                            <a className="footer-legal-link" onClick={openPopup}>
                                 Disclaimer
                             </a>
                         </Link>
@@ -26,7 +38,17 @@ const Footer = () => {
                 </ul>
                 <Socials />
             </div>
+            <Disclaimer popupStatus={popupStatus} closePopup={closePopup} />
         </footer>
+    );
+}
+
+const Disclaimer = ({ popupStatus, closePopup }) => {
+    return (
+        <Popup open={popupStatus} closeOnDocumentClick onClose={closePopup} className="popup">
+            <button className="close" onClick={closePopup}></button>
+
+        </Popup>
     );
 }
 

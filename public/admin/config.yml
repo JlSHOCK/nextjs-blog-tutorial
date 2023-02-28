@@ -38,7 +38,7 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string"}              
               - { label: "Title", name: "title", widget: "string"}
-              - { label: "copy", name: "copy", widget: "copy"}
+              - { label: "copy", name: "copy", widget: "text"}
               - { label: "Image", name: "image", widget: "image",  default: "images/placeholder-product.png", choose_url: false}
       - label: "Contact Info"
         name: "contact"
