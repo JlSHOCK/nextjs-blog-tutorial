@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: Hellooo World
 featuredImage: /uploads/placeholder-product.png
 buttons:
   - external: false
