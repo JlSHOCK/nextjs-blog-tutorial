@@ -41,7 +41,7 @@ const Products = ({ products }) => {
                   <div className={'product-categories'}>
                     {
                       product.category.map(catgry => (
-                        <p key={catgry} className={'product-category weight-700'}>{catgry}</p>
+                        <p key={`${catgry}`} className={'product-category weight-700'}>{catgry}</p>
                       ))}
                   </div>
                 }
