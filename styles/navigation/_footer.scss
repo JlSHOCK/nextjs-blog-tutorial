@@ -1,261 +1,47 @@
 $footerMobileWidth: 500px;
 
 .footer {
-  @include marginPadding(0, 80px 0);
+  @include marginPadding(0, 50px 0);
   background: $white;
 
-  &.footer-simple {
-    @include marginPadding(0, 80px 0);
-    background: $lightGray;
-  }
 
   .footer-container {
-    &.top {
-      @include flex(space-between, flex-start);
-      flex-direction: column;
-      grid-gap: 60px;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    grid-gap: 40px 60px;
 
-      @media screen and (min-width: 900px) {
-        @include flex(space-between, flex-start);
-        flex-direction: row;
-      }
-
-      .footer-logo-container {
-        width: 225px;
-
-        .footer-logo {
-          width: 160px;
-        }
-
-        .footer-logo-link {
-          .avatar-logo {
-            @include fullWidthImage();
-          }
-        }
-
-        .footer-logo-txt {
-          @include marginPadding(5px 0 0, 0);
-          font-size: 12px;
-          line-height: 16px;
-        }
-
-        .footer-careers {
-          display: none;
-          @include marginPadding(75px -20px -20px, 20px);
-          background: $lightGray;
-
-          @media screen and (min-width: 900px) {
-            display: block;
-          }
-
-          .footer-careers-title {
-            @include marginPadding(0, 0);
-            color: $darkGray;
-          }
-
-          .footer-careers-cta {
-            @include marginPadding(20px 0 0, 10px 20px);
-            @include ctaLinkColor($white, $darkGray, $purple, $yellow);
-          }
-        }
-      }
-
-      .footer-nav-container {
-        @include flex(center, flex-start);
-        flex: 1;
-        width: 100%;
-
-        @media screen and (min-width: $footerMobileWidth) {
-          width: auto;
-        }
-      }
-
-      .footer-nav-blocks {
-        @include grid(0 60px);
-        grid-template-columns: 1fr;
-        width: 100%;
-
-        @media screen and (min-width: $footerMobileWidth) {
-          @include grid(40px 80px);
-          grid-template-columns: repeat(2, 1fr);
-          width: auto;
-        }
-
-        @media screen and (min-width: 700px) {
-          grid-template-columns: repeat(3, 1fr);
-        }
-
-        .footer-nav-block {
-          position: relative;
-          @include flex(flex-start, flex-start);
-          flex-direction: column;
-          border-bottom: 1px solid rgba(255, 255, 255, .25);
-
-          @media screen and (min-width: $footerMobileWidth) {
-            display: block;
-            border-bottom: none;
-          }
-
-          &:last-child {
-            border-bottom: none;
-          }
-
-          &.active {
-            .nav-arrow-down {
-              transform: rotate(-180deg);
-            }
-
-            .footer-nav-items {
-              @include grid(0);
-
-              @media screen and (min-width: $footerMobileWidth) {
-                @include grid(10px);
-              }
-            }
-          }
-
-          .footer-nav-block-title {
-            @include flex(space-between, center);
-            @include marginPadding(0, 0);
-            width: 100%;
-            height: 60px;
-            font-size: 15px;
-            line-height: 21px;
-            color: $darkGray;
-            transition: color .25s;
-
-            @media screen and (min-width: $footerMobileWidth) {
-              display: block;
-              height: auto;
-              width: auto;
-            }
-
-            &:hover {
-              color: $orange;
-            }
-
-            .nav-arrow-down {
-              display: block;
-              width: 20px;
-              height: auto;
-              transition: all .25s;
-
-              @media screen and (min-width: $footerMobileWidth) {
-                display: none;
-              }
-
-              .nav-arrow-down-fill {
-                fill: $darkGray;
-                transition: all .25s;
-              }
-            }
-          }
-
-          .nav-item-close {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: -30px;
-            width: 85px;
-            height: 60px;
-            cursor: pointer;
-
-            @media screen and (min-width: $footerMobileWidth) {
-              display: none;
-            }
-          }
-
-          .footer-nav-items {
-            @include marginPadding(0, 0 0 20px);
-            width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, .25);
-            display: none;
-
-            @media screen and (min-width: $footerMobileWidth) {
-              @include marginPadding(15px 0 0, 0);
-              @include grid(10px);
-              width: auto;
-              border-bottom: none;
-            }
-
-            &:hover {
-              .footer-nav-item {
-                opacity: 1;
-              }
-
-              @media screen and (min-width: $footerMobileWidth) {
-                .footer-nav-item {
-                  opacity: .5;
-                }
-              }
-            }
-
-            .footer-nav-item {
-              transition: all .25s;
-
-              &:hover {
-                opacity: 1;
-              }
-
-              .footer-nav-link {
-                @include marginPadding(0, 10px 0);
-                @include flex(flex-start, center);
-                font-size: 13px;
-                line-height: 16px;
-                color: $darkGray;
-                transition: all .25s;
-
-                @media screen and (min-width: $footerMobileWidth) {
-                  @include marginPadding(0, 0);
-                }
-
-                &:hover {
-                  color: $darkGray;
-
-                  @media screen and (min-width: $footerMobileWidth) {
-                    color: $darkGray;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+    @media screen and (min-width: 700px) {
+      @include flex(space-between, center);
+      flex-direction: row;
     }
 
-    &.bottom {
-      margin-top: 60px;
+    .footer-legal-items {
       @include flex(flex-start, flex-start);
-      grid-gap: 40px 60px;
       flex-direction: column;
+      grid-gap: 15px;
 
-      @media screen and (min-width: 900px) {
-        @include flex(space-between, center);
+      @media screen and (min-width: 600px) {
+        @include flex(flex-start, flex-start);
         flex-direction: row;
       }
 
-      .footer-legal-items {
-        @include flex(flex-start, flex-start);
-        grid-gap: 20px;
-        flex-wrap: wrap;
-
-        .footer-legal-item,
-        .footer-legal-link {
-          font-size: 12px;
-          line-height: 17px;
-          color: $darkGray;
-          transition: all .25s;
-        }
-
-        .footer-legal-link {
-          &:hover {
-            color: $orange;
-          }
+      .footer-legal-link {
+        &:hover {
+          color: $ochre;
         }
       }
 
-      .social-icons {
-        flex: none;
+      .footer-copyright {
+        @include flex(flex-start, center);
+        grid-gap: 10px;
+      }
+
+      .spacer {
+        display: none;
+
+        @media screen and (min-width: 600px) {
+          display: inline;
+        }
       }
     }
   }

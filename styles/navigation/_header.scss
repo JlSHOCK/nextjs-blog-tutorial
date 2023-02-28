@@ -195,6 +195,10 @@ $copyGray: #6C6762;
               text-align: center;
               color: $black;
               transition: all .25s;
+
+              &:hover {
+                background: $lightGray;
+              }
             }
           }
 
@@ -249,7 +253,7 @@ $copyGray: #6C6762;
         border: none;
 
         @media screen and (min-width: $headerMobileWidth) {
-          @include marginPadding(0 0 0 -15px, 0);
+          @include marginPadding(0 0 0, 0);
           position: absolute;
           top: 80px;
           border: 1px solid $lightGray;
@@ -276,7 +280,7 @@ $copyGray: #6C6762;
               border-bottom: 1px solid $lightGray;
 
               @media screen and (min-width: $headerMobileWidth) {
-                @include marginPadding(0, 25px 30px);
+                @include marginPadding(0, 25px 15px);
                 @include flex(flex-start, flex-start);
                 height: auto;
               }

@@ -5,11 +5,11 @@
 
   &:hover {
     .social-icon-link {
-      opacity: .5;
+      opacity: .25;
     }
   }
 
-  .social-icon {         
+  .social-icon {
     @include flex(center, center);
 
     .social-icon-link {
@@ -17,25 +17,21 @@
       @include marginPadding(0, 8px);
       width: 35px;
       height: 35px;
-      border: 2px solid $orange;
+      border: 1px solid $apricot;
       transition: all .25s;
 
       &:hover {
         opacity: 1;
       }
 
-      &.white { border: 2px solid $white; }
-      &.black { border: 2px solid $black; }
-      &.orange { border: 2px solid $orange; }
-      &.yellow { border: 2px solid $yellow; }
-      &.purple { border: 2px solid $purple; }
-      &.gray { border: 2px solid $darkGray; }
-      &.gold { border: 2px solid $gold; }
-
       .social-icon {
         width: 100%;
         height: 100%;
         transition: all .25s;
+
+        .social-icon-fill {
+          fill: $apricot
+        }
       }
     }
   }
