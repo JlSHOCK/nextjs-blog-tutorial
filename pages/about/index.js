@@ -35,7 +35,6 @@ const About = () => {
       <section>
         <div className={`container`}>
           <h1 className={`title size-h-xxl weight-600`}>{AboutContent ? AboutContent.title : "About Us"}</h1>
-          {console.log(AboutContent)}
           {
             staff &&
 
@@ -77,7 +76,7 @@ const About = () => {
               {
                 staffPopupData.copy &&
                 <p className={'member-popup-copy size-p-s weight-400'}>
-                  The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.
+                  {staffPopupData.copy}
                 </p>
               }
             </div>
