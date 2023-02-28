@@ -50,7 +50,7 @@ collections:
             name: "socials"
             widget: list                    
             fields:
-              - { label: "Platform", name: "platform", widget: "string"} 
+              - {label: "Platform", name: "platform", widget: "select", options: ["Facebook", "Instagram", "LinkedIn", "Twitter", "YouTube"]}
               - { label: "Link", name: "link", widget: "string"}   
   - name: "products"
     label: "Products"
