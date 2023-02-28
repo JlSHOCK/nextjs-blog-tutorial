@@ -72,6 +72,17 @@ collections:
       - {label: "Product Company", name: "company", widget: "string"}
       - {label: "Product Link", name: "link", widget: "string"}
       - {label: "Product Category", name: "category", widget: "select", multiple: true, options: ["Ctgry 1", "Ctgry 2", "Ctgry 3"], required: false}
+  - name: "podcast"
+    label: "Podcast"
+    folder: "content/podcasts"
+    create: true
+    editor:
+      preview: false
+    add_to_top: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Podcast ID", name: "id", widget: "string"}
   - name: "blog"
     label: "Blog"
     folder: "content/blogs"
@@ -82,11 +93,3 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "podcast"
-    label: "Podcast"
-    folder: "content/podcasts"
-    create: true
-    add_to_top: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
