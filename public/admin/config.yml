@@ -17,8 +17,7 @@ collections:
         file: "content/home.md"
         fields:
           - { label: "Page Title", name: "title", widget: "string", default: "A Metabolic Approach to Health and Wellness"}              
-          - {label: "Hero Image", name: "heroImage", widget: "image",  default: "images/test.jpg", choose_url: false}
-          - {label: "Featured Image", name: "featuredImage", widget: "image",  default: "images/placeholder-product.png", choose_url: false}   
+          - {label: "Hero Image", name: "heroImage", widget: "image",  default: "images/test.jpg", choose_url: false, required: false}          
           - label: "Buttons"
             name: "buttons"
             widget: list

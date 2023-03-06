@@ -57,16 +57,22 @@ button {
 }
 
 .page-main {
+  position: relative;
   margin-top: 80px;
-  padding: 60px 0 100px;
+  background: url('/images/pattern.jpg') repeat;
+  z-index: -3;
+}
+
+.page {
+  &:not(.home) {
+    .page-main {
+      padding: 60px 0 100px
+    }
+  }
 }
 
 // defaults
 // ----------------------------------------------------------
-body {
-  background: url('/images/pattern.jpg') repeat;
-}
-
 .title {
   margin-bottom: 60px;
 }
@@ -76,7 +82,8 @@ body {
 .home {
   .hero {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 80px);
+    @include flex(flex-start, center);
 
     .hero-bg-img {
       position: absolute;
@@ -84,8 +91,18 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: -1;
       object-fit: cover;
       object-position: center;
+    }
+
+    .container {
+      flex: 1;
+    }
+
+    .title {
+      max-width: 750px;
+      color: $white;
     }
   }
 }
