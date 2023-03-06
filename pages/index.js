@@ -9,7 +9,7 @@ const Home = () => {
       title="Home"
       description=""
     >
-      <section>
+      <section className="hero">
         <div className={`container`}>
           <h1 className={`title size-h-xxl weight-600`}>{HomeContent ? HomeContent.title : "Hello World"}</h1>
         </div>

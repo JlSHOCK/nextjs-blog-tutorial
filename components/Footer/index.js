@@ -45,6 +45,8 @@ const Footer = () => {
 }
 
 const Disclaimer = ({ popupStatus, closePopup }) => {
+    const paragraphs = DisclaimerContent.copy.split('\---');
+
     return (
         <Popup open={popupStatus} closeOnDocumentClick onClose={closePopup} className="popup">
             <button className="close" onClick={closePopup}></button>
@@ -54,7 +56,13 @@ const Disclaimer = ({ popupStatus, closePopup }) => {
                     {DisclaimerContent ? DisclaimerContent.title : "Disclaimer"}
                 </h6>
                 <div className={'disclaimer-popup-copy size-p-m weight-400'}>
-                    {DisclaimerContent.copy}
+                    {
+                        paragraphs.map((paragraph, index) => {
+                            return (
+                                <p className={'disclaimer-popup-copy size-p-m weight-400'} key={`p-${index}`}>{paragraph.replace('\\', '')}</p>
+                            );
+                        })
+                    }
                 </div>
             </div>
         </Popup>
