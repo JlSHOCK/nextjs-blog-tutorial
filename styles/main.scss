@@ -77,13 +77,40 @@ button {
   margin-bottom: 60px;
 }
 
+.cta_btn {
+  @include marginPadding(0, 0);
+
+  .cta_btn_link {
+    @include marginPadding(0, 15px 20px);
+    @include flex(center, center);
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    background: $apricot;
+    cursor: pointer;
+
+    &:hover {
+      background: $sunrise;
+    }
+  }
+}
+
 // home
 // ----------------------------------------------------------
 .home {
   .hero {
     position: relative;
-    height: calc(100vh - 80px);
-    @include flex(flex-start, center);
+    height: auto;
+    padding: 60px 0 80px;
+    @include flex(flex-start, flex-start);
+    overflow-y: auto;
+
+    @media screen and (min-height: 660px) {
+      padding-top: 0;
+      height: calc(100vh - 80px);
+      @include flex(flex-start, center);
+    }
 
     .hero-bg-img {
       position: absolute;
@@ -101,11 +128,25 @@ button {
     }
 
     .title {
+      @include marginPadding(0, 0);
       max-width: 750px;
       color: $white;
-      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
-        0px 8px 13px rgba(0, 0, 0, 0.1),
-        0px 18px 23px rgba(0, 0, 0, 0.1);
+      // text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+      //   0px 8px 13px rgba(0, 0, 0, 0.1),
+      //   0px 18px 23px rgba(0, 0, 0, 0.1);
+    }
+
+    .bullets {
+      @include marginPadding(30px 0 0, 0);
+
+      .bullet {
+        @include marginPadding(10px 0 0, 0);
+        color: $white;
+      }
+    }
+
+    .cta_btns {
+      @include marginPadding(40px 0 0, 0);
     }
   }
 }
