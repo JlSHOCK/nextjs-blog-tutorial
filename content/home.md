@@ -1,5 +1,6 @@
 ---
 title: A Metabolic Approach to Health and Wellness
+heroImage: /uploads/test.jpg
 featuredImage: /uploads/placeholder-product.png
 buttons:
   - external: false
