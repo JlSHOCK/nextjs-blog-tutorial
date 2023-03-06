@@ -17,16 +17,22 @@ collections:
         file: "content/home.md"
         fields:
           - { label: "Page Title", name: "title", widget: "string", default: "A Metabolic Approach to Health and Wellness"}              
-          - {label: "Hero Image", name: "heroImage", widget: "image",  default: "images/test.jpg", choose_url: false, required: false}          
+          - {label: "Hero Image", name: "heroImage", widget: "image", choose_url: false, required: false}          
+          - label: "Bullets"
+            name: "bullets"
+            widget: list
+            required: false 
+            fields:
+              - { label: "Bullet", name: "bullet", widget: "text"}
           - label: "Buttons"
             name: "buttons"
             widget: list
-            max: 3
+            max: 2
             min: 1
             fields:
-              - { label: "Title", name: "title", widget: "string"}              
-              - { label: "Link", name: "link", widget: "string"}
-              - { label: "Open link in new tab?", name: "external", widget: "boolean", default: false, required: false}                                         
+              - { label: "CTA Text", name: "ctaTitle", widget: "string"}              
+              - { label: "CTA Link", name: "ctaLink", widget: "string"}
+              # - { label: "Open link in new tab?", name: "external", widget: "boolean", default: false, required: false}                                         
       - label: "About Page"
         name: "about"
         file: "content/about.md"
