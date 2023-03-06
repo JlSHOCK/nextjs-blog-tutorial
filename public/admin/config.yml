@@ -23,12 +23,12 @@ collections:
             widget: list
             required: false 
             fields:
-              - { label: "Bullet", name: "bullet", widget: "text"}
+              - { label: "Bullet", name: "bullet", widget: "string"}
           - label: "Buttons"
             name: "buttons"
             widget: list
             max: 2
-            min: 1
+            required: false 
             fields:
               - { label: "CTA Text", name: "ctaTitle", widget: "string"}              
               - { label: "CTA Link", name: "ctaLink", widget: "string"}
