@@ -1,0 +1,43 @@
+@import '../../styles/styles';
+
+.signup {
+  @include marginPadding(0, 100px 0);
+  background: $sand;
+
+  .signup_container {
+    @include grid(60px 30px);
+    grid-template-columns: 1fr;
+
+    @media screen and (min-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .signup_content {
+    @media screen and (min-width: 900px) {
+      min-width: 465px;
+    }
+
+    .title {
+      @include marginPadding(0 0 30px, 0);
+      max-width: 550px;
+    }
+
+    .signup_bullets {
+      @include marginPadding(0, 0);
+
+      .signup_bullet {
+        @include marginPadding(15px 0 0, 0);
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .signup_form_container {
+    min-height: 245px;
+    background: $white;
+  }
+}

@@ -83,15 +83,25 @@ button {
   .cta_btn_link {
     @include marginPadding(0, 15px 20px);
     @include flex(center, center);
+    grid-gap: 20px;
     font-weight: bold;
     color: $white;
     text-align: center;
     text-transform: uppercase;
     background: $apricot;
+    border-radius: 30px;
     cursor: pointer;
 
     &:hover {
       background: $sunrise;
+    }
+
+    .arrow {
+      width: 15px;
+
+      .arrow-fill {
+        fill: $white;
+      }
     }
   }
 }

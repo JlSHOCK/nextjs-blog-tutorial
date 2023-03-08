@@ -57,7 +57,18 @@ collections:
             widget: list                    
             fields:
               - {label: "Platform", name: "platform", widget: "select", options: ["Facebook", "Instagram", "LinkedIn", "Twitter", "YouTube"]}
-              - { label: "Link", name: "link", widget: "string"}   
+              - { label: "Link", name: "link", widget: "string"} 
+      - name: "signup"
+        label: "Sign Up"
+        file: "content/signup.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - label: "Bullets"
+            name: "bullets"
+            widget: list
+            required: false 
+            fields:
+              - { label: "Bullet", name: "bullet", widget: "string"}
       - name: "disclaimer"
         label: "Disclaimer"
         file: "content/disclaimer.md"
