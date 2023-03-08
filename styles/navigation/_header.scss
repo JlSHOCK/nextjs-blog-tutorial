@@ -172,7 +172,11 @@ $headerMobileWidth: 960px;
               color: $white;
               text-align: center;
               text-transform: uppercase;
-              background: $apricot;
+              background: $clay;
+
+              &:hover {
+                background: $ochre;
+              }
             }
 
             @media screen and (min-width: 500px) {
