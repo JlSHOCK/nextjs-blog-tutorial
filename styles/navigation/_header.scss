@@ -1,5 +1,4 @@
 $headerMobileWidth: 960px;
-$copyGray: #6C6762;
 
 .header {
   @include marginPadding(0, 0);
@@ -314,10 +313,10 @@ $copyGray: #6C6762;
         color: $white;
         text-align: center;
         text-transform: uppercase;
-        background: $ochre;
+        background: $clay;
 
         &:hover {
-          background: $sunrise;
+          background: $ochre;
         }
       }
     }
