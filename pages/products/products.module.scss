@@ -1,0 +1,90 @@
+@import '../../styles/styles';
+
+.products {
+  @include marginPadding(0, 0);
+  @include grid(30px);
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+
+  .product {
+    position: relative;
+    @include marginPadding(0, 0);
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    background: $white;
+    border: 1px solid $abalone;
+
+    &:hover {
+      @include boxShadow();
+    }
+
+    .product_link {
+      @include absoluteLink()
+    }
+
+    .product_img_container {
+      @include marginPadding(0, 30px);
+      width: 100%;
+      background: $white;
+      display: none;
+
+      @media screen and (min-width: 640px) {
+        display: block;
+      }
+
+      .product_img {
+        @include fullWidthImage();
+        max-height: 150px;
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+
+    .product_content {
+      @include marginPadding(0, 30px 30px 30px);
+      flex: 1;
+      width: 100%;
+      background: $abalone;
+
+      .product_company {
+        @include marginPadding(0 0 5px, 0);
+        text-transform: uppercase;
+        letter-spacing: -.5px;
+      }
+
+      .product_name {
+        @include marginPadding(0, 0);
+      }
+
+      .product_cta_btn {
+        @include marginPadding(20px 0 0, 10px 20px);
+        @include flex(center, center);
+        font-weight: bold;
+        color: $white;
+        text-align: center;
+        background: $apricot;
+
+        &:hover {
+          background: $sunrise;
+        }
+      }
+    }
+
+    .product_categories {
+      @include marginPadding(0, 0 30px 30px);
+      @include flex(flex-start, center);
+      grid-gap: 10px;
+      widtH: 100%;
+      background: $abalone;
+
+      .product_category {
+        @include marginPadding(0, 5px 10px);
+        font-size: 12px;
+        color: $black;
+        letter-spacing: 1px;
+
+        text-transform: uppercase;
+        background: $white;
+      }
+    }
+  }
+}

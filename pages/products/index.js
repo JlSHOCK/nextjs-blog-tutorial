@@ -1,7 +1,9 @@
-import fs from 'fs'
-import matter from 'gray-matter'
-import Link from 'next/link'
+import React from "react";
 import Layout from '../../components/Layout'
+import fs from 'fs';
+import matter from 'gray-matter';
+import Link from 'next/link';
+import styles from './products.module.scss';
 
 const Products = ({ products }) => {
   return (
@@ -13,35 +15,35 @@ const Products = ({ products }) => {
       <section>
         <div className={`container`}>
           <h1 className={`title size-h-xxl weight-600`}>Products</h1>
-          <ul className={'products'}>
+          <ul className={`${styles.products}`}>
             {products.map(product => (
               product.name !== undefined &&
-              <li key={product.slug} className={'product'}>
+              <li key={product.slug} className={`${styles.product}`}>
                 <Link href={`${product.link}`}>
-                  <a className={'product-link'} target="_blank"></a>
+                  <a className={`${styles.product_link}`} target="_blank" rel="noopener noreferrer"></a>
                 </Link>
-                <div className={'product-img-container'}>
-                  <img src={product.image ? product.image : "/images/placeholder-product.png"} alt={product.name} className={`product-img`} />
+                <div className={`${styles.product_img_container}`}>
+                  <img src={product.image ? product.image : "/images/placeholder-product.png"} alt={product.name} className={`${styles.product_img}`} />
                 </div>
-                <div className={'product-content'}>
+                <div className={`${styles.product_content}`}>
                   {
                     product.company &&
-                    <p className={'product-company size-p-xs weight-400'}>{product.company}</p>
+                    <p className={`${styles.product_company} size-p-xs weight-400`}>{product.company}</p>
                   }
-                  <h3 className={'product-name size-p-l weight-700'}>{product.name}</h3>
+                  <h3 className={`${styles.product_name} size-p-l weight-700`}>{product.name}</h3>
                   {/* {
                     product.link &&
-                    <button className={`product-cta-btn size-p-m weight-800`}>
+                    <button className={`${styles.product_cta_btn} size-p-m weight-800`}>
                       Buy Now
                     </button>
                   } */}
                 </div>
                 {
                   product.category &&
-                  <div className={'product-categories'}>
+                  <div className={`${styles.product_categories}`}>
                     {
                       product.category.map(catgry => (
-                        <p key={`${catgry}`} className={'product-category weight-700'}>{catgry}</p>
+                        <p key={`${catgry}`} className={`${styles.product_category} weight-700`}>{catgry}</p>
                       ))}
                   </div>
                 }

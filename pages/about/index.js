@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import Popup from "reactjs-popup";
 import Layout from '../../components/Layout';
+import Popup from "reactjs-popup";
+import styles from './about.module.scss';
 import { attributes as AboutContent } from '../../content/about.md';
 
 const About = () => {
@@ -34,23 +35,25 @@ const About = () => {
     >
       <section>
         <div className={`container`}>
-          <h1 className={`title size-h-xxl weight-600`}>{AboutContent ? AboutContent.title : "About Us"}</h1>
+          <h1 className={`title size-h-xxl weight-600`}>
+            {AboutContent ? AboutContent.title : "About Us"}
+          </h1>
           {
             staff &&
 
-            <ul className={'members'}>
+            <ul className={`${styles.members}`}>
               {
                 staff.map(({ image, title, name }, index) => {
                   return (
-                    <li className={'member'} key={`staff-${index}`} onClick={() => (openPopup && openPopup(name))}>
-                      <div className={'member-img-container'}>
-                        <img src={image ? image : "/images/placeholder-product.png"} alt={name} className={`member-img`} />
+                    <li className={`${styles.member}`} key={`staff-${index}`} onClick={() => (openPopup && openPopup(name))}>
+                      <div className={`${styles.member_img_container}`}>
+                        <img src={image ? image : "/images/placeholder-product.png"} alt={name} className={`${styles.member_img}`} />
                       </div>
-                      <div className={'member-content'}>
-                        <h3 className={'member-name size-p-l weight-700'}>{name}</h3>
+                      <div className={`${styles.member_content}`}>
+                        <h3 className={`${styles.member_name} size-p-l weight-700`}>{name}</h3>
                         {
                           title &&
-                          <p className={'member-title size-p-xs weight-400'}>{title}</p>
+                          <p className={`${styles.member_title} size-p-xs weight-400`}>{title}</p>
                         }
                       </div>
                     </li>
@@ -63,19 +66,19 @@ const About = () => {
         <Popup open={popupStatus} closeOnDocumentClick onClose={closePopup} className="popup">
           <button className="close" onClick={closePopup}></button>
 
-          <div className={'member-popup'}>
-            <div className={'member-popup-img-container'}>
-              <img src={staffPopupData.image ? staffPopupData.image : "/images/placeholder-product.png"} alt={staffPopupData.name} className={`member-popup-img`} />
+          <div className={`${styles.member_popup}`}>
+            <div className={`${styles.member_popup_img_container}`}>
+              <img src={staffPopupData.image ? staffPopupData.image : "/images/placeholder-product.png"} alt={staffPopupData.name} className={`${styles.member_popup_img}`} />
             </div>
-            <div className={'member-popup-content'}>
-              <h3 className={'member-popup-name size-h-m weight-700'}>{staffPopupData.name}</h3>
+            <div className={`${styles.member_popup_content}`}>
+              <h3 className={`${styles.member_popup_name} size-h-m weight-700`}>{staffPopupData.name}</h3>
               {
                 staffPopupData.title &&
-                <p className={'member-popup-title size-p-m weight-400'}>{staffPopupData.title}</p>
+                <p className={`${styles.member_popup_title} size-p-m weight-400`}>{staffPopupData.title}</p>
               }
               {
                 staffPopupData.copy &&
-                <p className={'member-popup-copy size-p-s weight-400'}>
+                <p className={`${styles.member_popup_copy} size-p-s weight-400`}>
                   {staffPopupData.copy}
                 </p>
               }

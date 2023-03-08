@@ -1,7 +1,7 @@
 @import "./styles.scss";
 @import './navigation/navigation.scss';
 
-// defaults
+// resets
 // ----------------------------------------------------------
 html,
 body {
@@ -51,6 +51,8 @@ button {
   outline: none;
 }
 
+// defaults
+// ----------------------------------------------------------
 .container {
   @include marginPadding(0 auto, 0 30px);
   max-width: 1260px;
@@ -71,12 +73,12 @@ button {
   }
 }
 
-// defaults
-// ----------------------------------------------------------
 .title {
   margin-bottom: 60px;
 }
 
+// cta
+// ----------------------------------------------------------
 .cta_btn {
   @include marginPadding(0, 0);
 
@@ -102,342 +104,6 @@ button {
       .arrow-fill {
         fill: $white;
       }
-    }
-  }
-}
-
-// home
-// ----------------------------------------------------------
-.home {
-  .hero {
-    position: relative;
-    height: auto;
-    padding: 60px 0 80px;
-    @include flex(flex-start, flex-start);
-    overflow-y: auto;
-
-    @media screen and (min-height: 660px) {
-      padding-top: 0;
-      height: calc(100vh - 80px);
-      @include flex(flex-start, center);
-    }
-
-    .hero-bg-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .container {
-      flex: 1;
-    }
-
-    .title {
-      @include marginPadding(0, 0);
-      max-width: 750px;
-      color: $white;
-      // text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
-      //   0px 8px 13px rgba(0, 0, 0, 0.1),
-      //   0px 18px 23px rgba(0, 0, 0, 0.1);
-    }
-
-    .bullets {
-      @include marginPadding(30px 0 0, 0);
-
-      .bullet {
-        @include marginPadding(10px 0 0, 0);
-        color: $white;
-      }
-    }
-
-    .cta_btns {
-      @include marginPadding(40px 0 0, 0);
-    }
-  }
-}
-
-// blog
-// ----------------------------------------------------------
-.blog-items {
-  @include marginPadding(0, 0);
-  @include grid(30px);
-
-  .blog-item {
-    position: relative;
-    @include marginPadding(0, 30px);
-    height: 100%;
-    background: $white;
-    border: 1px solid $abalone;
-    @include flex(flex-start, flex-start);
-    flex-direction: column;
-    grid-gap: 15px;
-
-    &:hover {
-      @include boxShadow();
-    }
-
-    .blog-item-link {
-      @include marginPadding(0, 0);
-      @include absoluteLink();
-    }
-
-    .blog-item-date {
-      @include marginPadding(0, 0);
-      text-transform: uppercase;
-    }
-
-    .blog-item-title {
-      @include marginPadding(0, 0);
-    }
-  }
-}
-
-// article
-// ----------------------------------------------------------
-.blog-title {
-  margin-bottom: 20px;
-}
-
-.blog-date {
-  margin-bottom: 50px;
-}
-
-.blog-content {
-  margin-top: 50px;
-}
-
-// products
-// ----------------------------------------------------------
-.products {
-  @include marginPadding(0, 0);
-  @include grid(30px);
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-
-  .product {
-    position: relative;
-    @include marginPadding(0, 0);
-    @include flex(flex-start, flex-start);
-    flex-direction: column;
-    background: $white;
-    border: 1px solid $abalone;
-
-    &:hover {
-      @include boxShadow();
-    }
-
-    .product-link {
-      @include absoluteLink()
-    }
-
-    .product-img-container {
-      @include marginPadding(0, 30px);
-      width: 100%;
-      background: $white;
-      display: none;
-
-      @media screen and (min-width: 640px) {
-        display: block;
-      }
-
-      .product-img {
-        @include fullWidthImage();
-        max-height: 150px;
-        object-fit: contain;
-        object-position: left;
-      }
-    }
-
-    .product-content {
-      @include marginPadding(0, 30px 30px 30px);
-      flex: 1;
-      width: 100%;
-      background: $abalone;
-
-      .product-company {
-        @include marginPadding(0 0 5px, 0);
-        text-transform: uppercase;
-        letter-spacing: -.5px;
-      }
-
-      .product-name {
-        @include marginPadding(0, 0);
-      }
-
-      .product-cta-btn {
-        @include marginPadding(20px 0 0, 10px 20px);
-        @include flex(center, center);
-        font-weight: bold;
-        color: $white;
-        text-align: center;
-        background: $apricot;
-
-        &:hover {
-          background: $sunrise;
-        }
-      }
-    }
-
-    .product-categories {
-      @include marginPadding(0, 0 30px 30px);
-      @include flex(flex-start, center);
-      grid-gap: 10px;
-      widtH: 100%;
-      background: $abalone;
-
-      .product-category {
-        @include marginPadding(0, 5px 10px);
-        font-size: 12px;
-        color: $black;
-        letter-spacing: 1px;
-
-        text-transform: uppercase;
-        background: $white;
-      }
-    }
-  }
-}
-
-// podcast
-// ----------------------------------------------------------
-.podcast-items {
-  @include marginPadding(0, 0);
-  @include grid(30px);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  .podcast-item {
-    position: relative;
-    @include marginPadding(0, 30px);
-    height: 100%;
-    background: $white;
-    border: 1px solid $abalone;
-    @include flex(flex-start, flex-start);
-    flex-direction: column;
-    grid-gap: 15px;
-
-    &:hover {
-      @include boxShadow();
-    }
-
-    .podcast-item-link {
-      @include marginPadding(0, 0);
-      @include absoluteLink();
-    }
-
-    .podcast-item-episode {
-      @include marginPadding(0, 0);
-      text-transform: uppercase;
-    }
-
-    .podcast-item-title {
-      @include marginPadding(0, 0);
-    }
-  }
-}
-
-// about
-// ----------------------------------------------------------
-.members {
-  @include marginPadding(0, 0);
-  @include grid(30px);
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
-
-  .member {
-    position: relative;
-    @include marginPadding(0, 0);
-    @include flex(flex-start, flex-start);
-    flex-direction: column;
-    background: $white;
-    border: 1px solid $abalone;
-    cursor: pointer;
-
-    &:hover {
-      @include boxShadow();
-    }
-
-    .member-link {
-      @include absoluteLink()
-    }
-
-    .member-img-container {
-      @include marginPadding(0, 0);
-      width: 100%;
-      background: $white;
-
-      .member-img {
-        @include fullWidthImage();
-        object-fit: cover;
-        object-position: center;
-      }
-    }
-
-    .member-content {
-      @include marginPadding(0, 30px 30px 30px);
-      flex: 1;
-      width: 100%;
-      background: $abalone;
-
-      .member-name {
-        @include marginPadding(0, 0);
-      }
-
-      .member-title {
-        @include marginPadding(5px 0 0, 0);
-        text-transform: uppercase;
-        letter-spacing: -.5px;
-      }
-    }
-  }
-}
-
-.member-popup {
-  @include marginPadding(0, 60px 20px);
-  @include flex(flex-start, flex-start);
-  flex-direction: column;
-  grid-gap: 40px 60px;
-
-  @media screen and (min-width: 800px) {
-    @include marginPadding(0, 50px);
-  }
-
-  @media screen and (min-width: 800px) {
-    @include flex(flex-start, flex-start);
-    flex-direction: row;
-  }
-
-  .member-popup-img-container {
-    @include marginPadding(0, 0);
-    width: 100%;
-    flex: 1;
-    max-width: 400px;
-    background: $white;
-
-    .member-popup-img {
-      @include fullWidthImage();
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-
-  .member-popup-content {
-    flex: 1;
-
-    .member-popup-name {
-      @include marginPadding(0, 0);
-    }
-
-    .member-popup-title {
-      @include marginPadding(5px 0 0, 0);
-      text-transform: uppercase;
-      letter-spacing: -.5px;
-    }
-
-    .member-popup-copy {
-      @include marginPadding(30px 0 0, 0);
     }
   }
 }
@@ -497,6 +163,93 @@ button {
         right: 14px;
         transform: rotate(135deg);
       }
+    }
+  }
+}
+
+// blog
+// ----------------------------------------------------------
+.blog-items {
+  @include marginPadding(0, 0);
+  @include grid(30px);
+
+  .blog-item {
+    position: relative;
+    @include marginPadding(0, 30px);
+    height: 100%;
+    background: $white;
+    border: 1px solid $abalone;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    grid-gap: 15px;
+
+    &:hover {
+      @include boxShadow();
+    }
+
+    .blog-item-link {
+      @include marginPadding(0, 0);
+      @include absoluteLink();
+    }
+
+    .blog-item-date {
+      @include marginPadding(0, 0);
+      text-transform: uppercase;
+    }
+
+    .blog-item-title {
+      @include marginPadding(0, 0);
+    }
+  }
+}
+
+// article
+// ----------------------------------------------------------
+.blog-title {
+  margin-bottom: 20px;
+}
+
+.blog-date {
+  margin-bottom: 50px;
+}
+
+.blog-content {
+  margin-top: 50px;
+}
+
+// podcast
+// ----------------------------------------------------------
+.podcast-items {
+  @include marginPadding(0, 0);
+  @include grid(30px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  .podcast-item {
+    position: relative;
+    @include marginPadding(0, 30px);
+    height: 100%;
+    background: $white;
+    border: 1px solid $abalone;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    grid-gap: 15px;
+
+    &:hover {
+      @include boxShadow();
+    }
+
+    .podcast-item-link {
+      @include marginPadding(0, 0);
+      @include absoluteLink();
+    }
+
+    .podcast-item-episode {
+      @include marginPadding(0, 0);
+      text-transform: uppercase;
+    }
+
+    .podcast-item-title {
+      @include marginPadding(0, 0);
     }
   }
 }
