@@ -15,9 +15,9 @@
     .social-icon-link {
       @include flex(center, center);
       @include marginPadding(0, 8px);
-      width: 35px;
-      height: 35px;
-      border: 1px solid $apricot;
+      width: 45px;
+      height: 45px;
+      // border: 1px solid $apricot;
       transition: all .25s;
 
       &:hover {
