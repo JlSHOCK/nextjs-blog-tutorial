@@ -26,6 +26,14 @@ $footerMobileWidth: 500px;
       }
 
       .footer-legal-link {
+        &.disclaimer {
+          color: $clay;
+
+          &:hover {
+            color: $ochre;
+          }
+        }
+
         &:hover {
           color: $ochre;
         }

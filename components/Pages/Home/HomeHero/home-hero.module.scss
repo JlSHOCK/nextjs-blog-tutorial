@@ -52,7 +52,7 @@
       @include marginPadding(0, 0);
 
       .cta_btn_link {
-        @include marginPadding(0, 15px 20px);
+        @include marginPadding(0, 20px 30px);
         @include flex(center, center);
         grid-gap: 20px;
         font-weight: bold;
@@ -67,10 +67,10 @@
           background: $sunrise;
         }
 
-        .arrow {
+        svg {
           width: 15px;
 
-          .arrow-fill {
+          path {
             fill: $white;
           }
         }

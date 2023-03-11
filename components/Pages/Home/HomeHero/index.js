@@ -31,7 +31,7 @@ const HomeHero = () => {
                         {
                             HomeContent.buttons.map((button, index) => {
                                 return (
-                                    <Button link={button.ctaLink} cta={button.ctaTitle} arrow={true} key={`button - ${index} `} />
+                                    <Button link={button.ctaLink} cta={button.ctaTitle} arrow={true} btnClass={`${styles.cta_btn}`} btnLinkClass={`${styles.cta_btn_link}`} key={`button - ${index} `} />
                                 );
                             })
                         }

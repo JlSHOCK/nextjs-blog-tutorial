@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Button = ({ link, newWindow, ctaClass, cta, clickEvent, arrow }) => {
+const Button = ({ link, cta, arrow, newWindow, btnClass, btnLinkClass, clickEvent }) => {
     if (clickEvent) {
         return (
-            <button className={`${ctaClass} cta_btn`} onClick={clickEvent}>
-                <span className={`cta_btn_link size-p-m weight-800`}>
+            <button className={`${btnClass} cta_btn`} onClick={clickEvent}>
+                <span className={`${btnLinkClass} cta_btn_link size-p-m weight-800`}>
                     {cta}
                     {
                         arrow &&
@@ -18,9 +18,9 @@ const Button = ({ link, newWindow, ctaClass, cta, clickEvent, arrow }) => {
         );
     } else {
         return (
-            <button className={`${ctaClass} cta_btn`}>
+            <button className={`${btnClass} cta_btn`}>
                 <Link href={link}>
-                    <a className={`cta_btn_link size-p-m weight-800`}
+                    <a className={`${btnLinkClass} cta_btn_link size-p-m weight-800`}
                         target={newWindow ? "_blank" : "_self"}
                         rel={newWindow ? "noopener noreferrer" : ""}>
                         {cta}

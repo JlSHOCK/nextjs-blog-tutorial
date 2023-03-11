@@ -19,12 +19,12 @@ $headerMobileWidth: 960px;
 
   &.scrolled {
     background: $white;
-    border-bottom: 1px solid $lightGray;
+    border-bottom: 1px solid $lightGray2;
   }
 
   &:hover {
     background: $white;
-    border-bottom: 1px solid $lightGray;
+    border-bottom: 1px solid $lightGray2;
   }
 
   .header-container {
@@ -55,7 +55,7 @@ $headerMobileWidth: 960px;
           @include marginPadding(0, 0 0 80px);
           display: block;
           position: absolute;
-          top: 80px;
+          top: 81px;
           left: 0;
           width: 100%;
           height: calc(100vh - 80px);
@@ -109,7 +109,7 @@ $headerMobileWidth: 960px;
           &:hover {
             .nav-item {
               .nav-item-link {
-                opacity: .25;
+                opacity: .1;
               }
             }
           }
@@ -191,12 +191,14 @@ $headerMobileWidth: 960px;
             color: $black;
             width: 100%;
             transition: background .25s;
+            border-bottom: 1px solid $lightGray2;
 
             @media screen and (min-width: $headerMobileWidth) {
               @include flex(center, center);
               @include marginPadding(0, 0 15px);
               text-align: center;
               color: $black;
+              border-bottom: none;
               transition: all .25s;
 
               &:hover {
@@ -254,12 +256,14 @@ $headerMobileWidth: 960px;
         position: static;
         background: $white;
         border: none;
+        border-bottom: 1px solid $lightGray2;
 
         @media screen and (min-width: $headerMobileWidth) {
           @include marginPadding(0 0 0, 0);
           position: absolute;
           top: 80px;
-          border: 1px solid $lightGray;
+          border: 1px solid $lightGray2;
+          border-top: none;
           z-index: 3;
           min-width: 240px;
         }
@@ -280,7 +284,8 @@ $headerMobileWidth: 960px;
               flex-direction: column;
               height: 80px;
               transition: all .25s;
-              border-bottom: 1px solid $lightGray;
+              background: $lightGray;
+              border-bottom: 1px solid $lightGray2;
 
               @media screen and (min-width: $headerMobileWidth) {
                 @include marginPadding(0, 25px 15px);
@@ -289,7 +294,7 @@ $headerMobileWidth: 960px;
               }
 
               &:hover {
-                background: $lightGray;
+                background: $white;
               }
 
               .subnav-item-title {

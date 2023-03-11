@@ -22,7 +22,7 @@ const Footer = () => {
                 <ul className="footer-legal-items">
                     <li className="footer-legal-item weight-500">
                         <Link href="#">
-                            <a className="footer-legal-link" onClick={openPopup}>
+                            <a className="footer-legal-link disclaimer" onClick={openPopup}>
                                 Disclaimer
                             </a>
                         </Link>
